@@ -1,4 +1,4 @@
-import { hexToFilter } from "./converter/converter";
+// import { hexToFilter } from "./converter/converter";
 
 console.log("AAAaaaaa")
 
@@ -77,7 +77,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     if (resp.color_hex_code && resp.color_hex_code.length > 0) {
       resp.color_hex_code.forEach(hexCode => {
-        // const item = document.createElement("div")
+        const item = document.createElement("div")
         const liElem = document.createElement("span")
 
         liElem.innerText = hexCode
@@ -88,19 +88,24 @@ window.addEventListener('DOMContentLoaded', () => {
           GiveMetheChild("#e19526", "copied!")
         })
 
-        // const filterItem = document.createElement("span")
-        //
-        // filterItem.innerText = "Get Filter"
-        // filterItem.style.backgroundColor = "#EEE7E4FF"
-        // filterItem.style.cursor = "pointer"
-        // filterItem.addEventListener("click", () => {
-        //   const filter = hexToFilter(hexCode)
-        //   console.log("FILTER GENERATED: ", filter)
-        // })
-        //
-        // item.appendChild(liElem)
-        // item.appendChild(filterItem)
-        resultList.appendChild(liElem)
+        const filterItem = document.createElement("span")
+
+        filterItem.innerText = "Get Filter"
+        filterItem.style.backgroundColor = "#EEE7E4FF"
+        filterItem.style.cursor = "pointer"
+        filterItem.addEventListener("click", () => {
+          let filter;
+          try {
+            filter = hexToFilter(hexCode);
+          }catch (e) {
+            
+          }
+          console.log("FILTER GENERATED: ", filter)
+        })
+
+        item.appendChild(liElem)
+        item.appendChild(filterItem)
+        resultList.appendChild(item)
       })
 
       // const ClearButton = document.createElement("button")
