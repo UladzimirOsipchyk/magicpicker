@@ -1,5 +1,5 @@
 // import { hexToFilter } from "./converter/converter";
-
+//
 console.log("AAAaaaaa")
 
 document.getElementById("hiButton")?.addEventListener("click", sayHi);
@@ -98,7 +98,7 @@ window.addEventListener('DOMContentLoaded', () => {
           try {
             filter = hexToFilter(hexCode);
           }catch (e) {
-            
+
           }
           console.log("FILTER GENERATED: ", filter)
         })
