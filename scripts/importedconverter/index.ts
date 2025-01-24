@@ -1,0 +1,43 @@
+import { ColorToFilterOptions, FilterToColorOptions } from './shared/types/options';
+import { ColorToFilterResult, FilterToColorResult } from './shared/types/result';
+import { ColorToFilter } from './colorToFilter/colorToFilter';
+import { FilterToColor } from './filterToColor/filterToColor';
+import {HEX, HSL, KEYWORD, RGB} from "./npm/color-convert/conversions";
+
+export default class CssFilterConverter {
+  public static rgbToFilter(rgbString: string, options?: ColorToFilterOptions): ColorToFilterResult {
+    return ColorToFilter.rgbToFilter(rgbString, options);
+  }
+
+  public static hexToFilter(hexString: string, options?: ColorToFilterOptions): ColorToFilterResult {
+    return ColorToFilter.hexToFilter(hexString, options);
+  }
+
+  // public static hslToFilter(hslString: string, options?: ColorToFilterOptions): ColorToFilterResult {
+  //   return ColorToFilter.hslToFilter(hslString, options);
+  // }
+  //
+  // public static keywordToFilter(keyword: KEYWORD, options?: ColorToFilterOptions): ColorToFilterResult {
+  //   return ColorToFilter.keywordToFilter(keyword, options);
+  // }
+
+  // public static async filterToHex(filterString: string): Promise<FilterToColorResult<HEX>> {
+  //   return FilterToColor.filterToHex(filterString);
+  // }
+  //
+  // public static async filterToRgb(
+  //   filterString: string,
+  //   options?: FilterToColorOptions,
+  // ): Promise<FilterToColorResult<RGB | string>> {
+  //   return FilterToColor.filterToRgb(filterString, options);
+  // }
+  //
+  // public static async filterToHsl(
+  //   filterString: string,
+  //   options?: FilterToColorOptions,
+  // ): Promise<FilterToColorResult<HSL | string>> {
+  //   return FilterToColor.filterToHsl(filterString, options);
+  // }
+}
+
+// module.exports = CssFilterConverter;

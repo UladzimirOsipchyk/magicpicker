@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <style>
+      .round-button {
+        width: 30px; /* ширина кнопки */
+        height: 30px; /* высота кнопки */
+        border-radius: 50%; /* делает кнопку круглой */
+        /*background-color: #4CAF50; !* цвет фона *!*/
+        /*color: white; !* цвет текста *!*/
+        /*border: none; !* убирает рамку *!*/
+        display: flex; /* выравнивание текста */
+        align-items: center; /* выравнивание текста по вертикали */
+        justify-content: center; /* выравнивание текста по горизонтали */
+        font-size: 16px; /* размер текста */
+        cursor: pointer; /* меняет указатель мыши на "руку" */
+        transition: background-color 0.3s ease; /* эффект при наведении */
+      }
+
+      .round-button:hover {
+        /*background-color: #45a049; !* цвет при наведении *!*/
+      }
+    </style>
+  </head>
+  <body>
+  <div id="mainCont">
+    <div id="picker_btn_cont" class="round-button" >
+      <img src="img/tool.png" style="width: 25px; height: 25px">
+    </div>
+
+    <div id="clear_history" class="round-button" >
+      <img src="img/delete-history.png" style="width: 25px; height: 25px">
+    </div>
+
+
+    <ul id="result">
+    </ul>
+  </div>
+  </body>
+  <script src="scripts/popup.js"></script>
+  <script src="scripts/contentScript.js"></script>
+  <!--  <body>-->
+<!--    <h1>Hey</h1>-->
+<!--    -->
+<!--    <button id="hiButton" class="round-button">Say Hi</button>-->
+<!--    <script src="scripts/popup.js"></script>-->
+<!--  </body>-->
+</html>
